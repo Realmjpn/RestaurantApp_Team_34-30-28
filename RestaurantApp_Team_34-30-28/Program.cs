@@ -62,7 +62,17 @@ namespace RestaurantApp_Team_34_30_28
         // เอ็ม รับผิดชอบ
         static void AddRestaurant()
         {
-            Console.WriteLine("Not completed");
+            Console.WriteLine("===== Add Restaurant =====");
+            Console.Write("ใส่ชื่อร้าน : ");
+            string name = Console.ReadLine();
+
+            Console.Write("ใส่ประเภทร้าน : ");
+            string type = Console.ReadLine();
+
+            Console.Write("ใส่คะแนนร้าน : ");
+            double rating = double.Parse(Console.ReadLine());
+
+            restaurants.Add(new Restaurant { Name = name, Type = type, Rating = rating });
         }
 
         // ไนท์ รับผิดชอบ
