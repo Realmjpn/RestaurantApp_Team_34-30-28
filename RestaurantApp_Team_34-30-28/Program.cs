@@ -31,7 +31,7 @@ namespace RestaurantApp_Team_34_30_28
             while (true)
             {
                 Console.WriteLine("\n===== Restaurant Menu =====");
-                Console.WriteLine("1. Show Restaurant");
+                Console.WriteLine("1. Add Restaurant");
                 Console.WriteLine("2. Show Good Rating");
                 Console.WriteLine("3. Show Summary");
                 Console.WriteLine("0. Exit");
@@ -62,7 +62,22 @@ namespace RestaurantApp_Team_34_30_28
         // เอ็ม รับผิดชอบ
         static void AddRestaurant()
         {
-            Console.WriteLine("===== Show Restaurant =====");
+            // เพิ่มร้านอาหารใหม่
+            Console.WriteLine("\n===== Add Restaurant =====");
+            // รับข้อมูลร้านอาหารจากผู้ใช้
+            Console.Write("ใส่ชื่อร้าน : ");
+            string name = Console.ReadLine();
+
+            Console.Write("ใส่ประเภทร้าน : ");
+            string type = Console.ReadLine();
+
+            Console.Write("ใส่คะแนนร้าน : ");
+            double rating = double.Parse(Console.ReadLine());
+            // เพิ่มร้านอาหารใหม่ลงในรายการ
+            restaurants.Add(new Restaurant { Name = name, Type = type, Rating = rating });
+            Console.WriteLine("เพิ่มร้านอาหารเรียบร้อยแล้ว");
+
+            Console.WriteLine("\n===== Show Restaurant =====");
             restaurants.ForEach(r => Console.WriteLine($"Name: {r.Name} Type: {r.Type} Rating: {r.Rating}"));
         }
 
