@@ -18,9 +18,12 @@ namespace RestaurantApp_Team_34_30_28
     {
         static List<Restaurant> restaurants = new List<Restaurant>
     {
-        new Restaurant { Name = "KFC", Type = "Fast Food", Rating = 4.2 },
-        new Restaurant { Name = "MK", Type = "Suki", Rating = 4.7 },
-        new Restaurant { Name = "Fuji", Type = "Japanese", Rating = 4.8 }
+        new Restaurant { Name = "McDonald's", Type = "Fast Food", Rating = 4.2 },
+        new Restaurant { Name = "Suki Teenoi", Type = "Suki", Rating = 4.7 },
+        new Restaurant { Name = "Shinkanzen", Type = "Japanese", Rating = 4.8 },
+        new Restaurant { Name = "Burger King", Type = "Fast Food", Rating = 4.5 },
+        new Restaurant { Name = "Momo Paradise", Type = "Suki", Rating = 4.6 },
+        new Restaurant { Name = "Izakaya", Type = "Japanese", Rating = 4.4 }
     };
 
         static void Main(string[] args)
