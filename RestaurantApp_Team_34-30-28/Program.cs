@@ -98,7 +98,30 @@ namespace RestaurantApp_Team_34_30_28
         // เดียว รับผิดชอบ
         static void ShowSummary()
         {
-            Console.WriteLine("Not completed");
+            Restaurant highest = restaurants[0];
+            Restaurant lowest = restaurants[0];
+
+            foreach (Restaurant r in restaurants)
+            {
+                if (r.Rating > highest.Rating)
+                {
+                    highest = r;
+                }
+
+                if (r.Rating < lowest.Rating)
+                {
+                    lowest = r;
+                }
+            }
+
+            Console.WriteLine("*********************************");
+            Console.WriteLine("ร้านคะแนนสูงสุด: " + highest.Name);
+            Console.WriteLine("คะแนน: " + highest.Rating);
+            Console.WriteLine("*********************************");
+            Console.WriteLine("ร้านคะแนนต่ำสุด: " + lowest.Name);
+            Console.WriteLine("คะแนน: " + lowest.Rating);
+            Console.WriteLine("*********************************");
+
         }
     }
 
