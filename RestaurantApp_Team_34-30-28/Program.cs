@@ -65,7 +65,15 @@ namespace RestaurantApp_Team_34_30_28
         // ไนท์ รับผิดชอบ
         static void ShowGoodRating()
         {
-            Console.WriteLine("Not completed");
+            Console.WriteLine("\n===== Good Restaurants =====");
+
+            foreach (var restaurant in restaurants)
+            {
+                if (restaurant.Rating >= 4.5)
+                {
+                    Console.WriteLine($"Name: {restaurant.Name} | Type: {restaurant.Type} | Rating: {restaurant.Rating}");
+                }
+            }
         }
 
         // เดียว รับผิดชอบ
