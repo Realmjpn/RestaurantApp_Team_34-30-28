@@ -18,9 +18,12 @@ namespace RestaurantApp_Team_34_30_28
     {
         static List<Restaurant> restaurants = new List<Restaurant>
     {
-        new Restaurant { Name = "KFC", Type = "Fast Food", Rating = 4.2 },
-        new Restaurant { Name = "MK", Type = "Suki", Rating = 4.7 },
-        new Restaurant { Name = "Fuji", Type = "Japanese", Rating = 4.8 }
+        new Restaurant { Name = "McDonald's", Type = "Fast Food", Rating = 4.2 },
+        new Restaurant { Name = "Suki Teenoi", Type = "Suki", Rating = 4.7 },
+        new Restaurant { Name = "Shinkanzen", Type = "Japanese", Rating = 4.8 },
+        new Restaurant { Name = "Burger King", Type = "Fast Food", Rating = 4.5 },
+        new Restaurant { Name = "Momo Paradise", Type = "Suki", Rating = 4.6 },
+        new Restaurant { Name = "Izakaya", Type = "Japanese", Rating = 4.4 }
     };
 
         static void Main(string[] args)
@@ -59,7 +62,23 @@ namespace RestaurantApp_Team_34_30_28
         // เอ็ม รับผิดชอบ
         static void AddRestaurant()
         {
-            Console.WriteLine("Not completed");
+            // เพิ่มร้านอาหารใหม่
+            Console.WriteLine("\n===== Add Restaurant =====");
+            // รับข้อมูลร้านอาหารจากผู้ใช้
+            Console.Write("ใส่ชื่อร้าน : ");
+            string name = Console.ReadLine();
+
+            Console.Write("ใส่ประเภทร้าน : ");
+            string type = Console.ReadLine();
+
+            Console.Write("ใส่คะแนนร้าน : ");
+            double rating = double.Parse(Console.ReadLine());
+            // เพิ่มร้านอาหารใหม่ลงในรายการ
+            restaurants.Add(new Restaurant { Name = name, Type = type, Rating = rating });
+            Console.WriteLine("เพิ่มร้านอาหารเรียบร้อยแล้ว");
+
+            Console.WriteLine("\n===== Show Restaurant =====");
+            restaurants.ForEach(r => Console.WriteLine($"Name: {r.Name} Type: {r.Type} Rating: {r.Rating}"));
         }
 
         // ไนท์ รับผิดชอบ
